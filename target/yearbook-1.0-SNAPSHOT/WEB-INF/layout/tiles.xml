@@ -22,4 +22,6 @@
         <put-attribute name="body" value="/WEB-INF/views/jsp/home.jsp"/>
     </definition>
 
+    <definition name="404" template="/WEB-INF/views/jsp/404.jsp"/>
+
 </tiles-definitions>

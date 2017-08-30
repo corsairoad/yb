@@ -26,7 +26,7 @@
                     <div class="panel-body">
                         <c:if test="${isSaved == true}">
                             <div class="alert alert-success">
-                                <strong>Well done!</strong> You successfully read this important alert message.
+                                <strong>Well done!</strong> ${facultyName} successfully saved.
                             </div>
                         </c:if>
                         <div class="row">
@@ -36,6 +36,11 @@
                                         <sf:label path="facultyName">Faculty Name</sf:label>
                                         <sf:input path="facultyName" class="form-control" placeholder="input faculty name"/>
                                         <sf:errors path="facultyName" cssClass="error"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <sf:label path="facultyCode">Faculty Code</sf:label>
+                                        <sf:input path="facultyCode" class="form-control" placeholder="input faculty code"/>
+                                        <sf:errors path="facultyCode" cssClass="error"/>
                                     </div>
                                     <button type="submit" class="btn btn-default">Save</button>
                                 </sf:form>

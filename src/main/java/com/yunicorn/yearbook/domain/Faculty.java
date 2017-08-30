@@ -19,7 +19,7 @@ public class Faculty {
     }
 
     public String getFacultyCode() {
-        return "";
+        return facultyCode;
     }
 
     public void setFacultyCode(String facultyCode) {

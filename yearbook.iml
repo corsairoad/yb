@@ -38,6 +38,8 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.8.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax:javaee-web-api:7.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet.jsp:jsp-api:2.1" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: taglibs:standard:1.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.13" level="project" />
@@ -68,7 +70,6 @@
     <orderEntry type="library" name="Maven: org.apache.tiles:tiles-template:3.0.7" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tiles:tiles-autotag-core-runtime:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tiles:tiles-request-jsp:1.0.6" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.8.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.3.8.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.6.10" level="project" />
   </component>
 </module>
