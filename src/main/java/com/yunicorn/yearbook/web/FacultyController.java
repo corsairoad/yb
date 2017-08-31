@@ -6,11 +6,12 @@ import com.yunicorn.yearbook.service.FacultyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.servlet.http.Part;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by fadlymunandar on 8/29/17.
@@ -19,6 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequestMapping( value = "/faculty")
 public class FacultyController {
 
+    private static final String FEATURED_IMAGE_PATH = "/Applications/tomcat-8.5.20/data/yearbook/featured_images";
     private FacultyService facultyService;
 
     @RequestMapping(method = RequestMethod.GET)
@@ -30,9 +32,14 @@ public class FacultyController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addFaculty(Faculty faculty, RedirectAttributes redirect) {
+    public String addFaculty(@RequestPart("featuredImage")Part featuredImg, Faculty faculty, RedirectAttributes redirect) throws IOException {
+
+
+        featuredImg.write( FEATURED_IMAGE_PATH + File.separator + featuredImg.getSubmittedFileName());
+
         redirect.addFlashAttribute("facultyName", faculty.getFacultyName());
         redirect.addFlashAttribute("isSaved", true);
+
         facultyService.addFaculty(faculty);
 
         return "redirect:/faculty?saved="+true;

@@ -31,7 +31,8 @@
                         </c:if>
                         <div class="row">
                             <div class="col-lg-6">
-                                <sf:form method="POST" action="${pageContext.request.contextPath}/faculty/add" role="form" modelAttribute="faculty">
+                                <sf:form method="POST" action="${pageContext.request.contextPath}/faculty/add"
+                                         role="form" modelAttribute="faculty" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <sf:label path="facultyName">Faculty Name</sf:label>
                                         <sf:input path="facultyName" class="form-control" placeholder="input faculty name"/>
@@ -41,6 +42,12 @@
                                         <sf:label path="facultyCode">Faculty Code</sf:label>
                                         <sf:input path="facultyCode" class="form-control" placeholder="input faculty code"/>
                                         <sf:errors path="facultyCode" cssClass="error"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Featured Image</label>
+                                        <input type="file"
+                                               name="featuredImage"
+                                               accept="image/jpeg,image/png,image/gif" />
                                     </div>
                                     <button type="submit" class="btn btn-default">Save</button>
                                 </sf:form>

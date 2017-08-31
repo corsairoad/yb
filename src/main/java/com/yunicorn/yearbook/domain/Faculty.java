@@ -9,6 +9,7 @@ public class Faculty {
 
     private String facultyName;
     private String facultyCode;
+    private String featuredImgLocation;
 
     public String getFacultyName() {
         return facultyName;
@@ -24,5 +25,13 @@ public class Faculty {
 
     public void setFacultyCode(String facultyCode) {
         this.facultyCode = facultyCode;
+    }
+
+    public String getFeaturedImgLocation() {
+        return featuredImgLocation;
+    }
+
+    public void setFeaturedImgLocation(String featuredImgLocation) {
+        this.featuredImgLocation = featuredImgLocation;
     }
 }
